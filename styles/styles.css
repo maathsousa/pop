@@ -14,14 +14,6 @@ body{
     font-family: var(--fonte-p);
 }
 
-/*Banner de Inicio*/
-
-.inicio{
-    background-color: var(--fundo-azul);
-    max-width: 100%;
-    height: auto;
-}
-
 .strong-tudo{
     font-weight: 700;
 }
@@ -30,9 +22,45 @@ body{
     color: var(--branco);
 }
 
-/* Resposivo Celular */
+/* Fundo Azul Claro */
 
-@media (max-width: 768px){
+.inicio, .rodape{
+    background-color: var(--fundo-azul);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fundo Azul Escuro */
+
+.palestra, .desconto, .acoes, .cursos{
+    background-color: var(--azul-escuro);
+    padding: 1em;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fundo Cinzas */
+
+.lavo, .plus-crq{
+    background-color: var(--fundo-cinza);
+    padding: 1em;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fundo Branco */
+
+.anos, .conheca, .numeros, .colacao, .crq-sp, .contato{
+    background-color: var(--branco);
+    padding: 1em;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+/* Resposivo Celular */
 
     /* Banner de Inicio */
     .circulo{
@@ -98,19 +126,24 @@ body{
         margin: 0 0 -140px 0;
     }
 
+    .imagens{
+        display: grid;
+        grid: repeat(2, 270px) / auto-flow 150px;
+        margin: -60px 0 20px 40px;
+        padding: 1em;
+        align-items: center;
+        justify-content: center;
+    }
+
     .imagens img{
         max-width: 100%;
         height: auto;
-        width: 150px;
-        margin: 0 .5em 2em 1.5em;
-        position: relative;
-        top: -40px;
+        width: 130px;
     }
 
     #garota, #copos{
         position: relative;
-        top: 10px;
-        z-index: 2;
+        top: 20px;
     }
 
     #usina{
@@ -120,20 +153,14 @@ body{
     #bolinhas{
         max-width: 100%;
         height: auto;
-        width: 300px;
+        width: 250px;
         position: relative;
-        top: 550px; left: -150px;
+        top: 450px; left: -200px;
         transform: rotate(-90deg);
         z-index: 1;
     }
 
     /* Section sobre os 30 anos */
-
-    .anos{
-        background-color: var(--branco);
-        padding: 1em;
-    }
-
     .anos h2{
         text-align: center;
         color: var(--fundo-azul);
@@ -178,11 +205,6 @@ body{
     }
 
     /* Section sobre o POP */
-
-    .plus-crq{
-        background-color: var(--fundo-cinza);
-    }
-
     .plus-crq h2{
         text-align: center;
         color: var(--branco);
@@ -240,10 +262,7 @@ body{
 
     /* Section Sobre Palestra */
 
-    .palestra{
-        background-color: var(--azul-escuro);
-        padding: 1em;
-    }
+   
 
     .palestra img, .titulo img{
         max-width: 100%;
@@ -335,11 +354,6 @@ body{
 
     /* Section sobre os descontos */
 
-    .desconto{
-        background-color: var(--azul-escuro);
-        padding: 1em;
-    }
-
     .titulo-desconto img{
         max-width: 100%;
         height: auto;
@@ -364,14 +378,15 @@ body{
         color: var(--branco);
     }
 
-    .card{
+    .card img{
         max-width: 100%;
         height: auto;
         width: 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 2em 2.5em;
+        align-items: center;
+        padding: .5em 2em;
         gap: 1em;
     }
 
@@ -379,7 +394,7 @@ body{
         color: var(--branco);
         text-align: center;
         position: relative;
-        top: -15px; left: 12px;
+        top: 0px; left: 12px;
         margin: 0 0 0 1em;
         font-size: 16px;
     }
@@ -413,11 +428,6 @@ body{
     }
 
     /* Section sobre ações */
-
-    .acoes{
-        background-color: var(--azul-escuro);
-    }
-
     .acoes p{
         color: var(--branco);
         text-align: center;
@@ -448,9 +458,7 @@ body{
     /* Section sobre o Premio Lavoisier */
 
     .lavo{
-        background-color: var(--fundo-cinza);
         display: flex;
-        padding: 1em;
     }
 
     .medalha img{
@@ -515,12 +523,6 @@ body{
     }
 
     /* Section sobre os Cursos */
-
-    .cursos{
-        background-color: var(--azul-escuro);
-        padding: 1em;
-    }
-
     .four img{
         max-width: 100%;
         height: auto;
@@ -557,7 +559,6 @@ body{
     /* Rodape */
 
     .rodape{
-        background-color: var(--fundo-azul);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -593,29 +594,29 @@ body{
         gap: 1em;
     }
     
-}
 
 /* Responsivo Tablet */
 
-@media (min-width: 1024px){
+@media (min-width: 768px){
 
     /* Banner Inicio */
 
-    .circulo{
-        transform: rotate(-50deg);
-        position: relative;
-        top: -10px; left: -80px;
+    .inicio{
+        padding: 2em;
+    }
+
+    .circulo{        
         max-width: 100%;
         height: auto;
-        width: 300px;
+        width: 200px;
+        top: -50px; left: -90px;
     }
+
 
     .tudo{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 1em;
-        padding: 4em;
     }
 
     .crq-pop{
@@ -625,67 +626,50 @@ body{
     }
     
     .inicio span img{
-        max-width: 100%;
-        height: auto;
-        width: 300px;
-        position: relative;
-        top: -120px;
+        width: 200px;
+        top: -60px;
+        margin: 0 10px 0 0;
     }
 
     .texto{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         margin: 0 0 .3em 4em;
-        position: relative;
-        top: -110px; left: -30px;
+        top: -50px; left: -30px;
     }
 
     .crq-pop p, .crq-pop a{
-        position: relative;
-        top: -120px;
+        top: -50px;
     }
 
     .crq-pop p{
-        text-align: center;
-        border: 1px solid var(--branco);
-        padding: 8px 10px;
-        border-radius: 15px;
-        margin: .5em 0 .5em 0;
-        font-size: 26px;
+        font-size: 16px;
     }
 
     .crq-pop h1{
-        font-size: 90px;
+        font-size: 50px;
         color: var(--fundo-pop);
     }   
 
     .crq-pop h2{
-        font-size: 45px;
-        text-align: center;
+        font-size: 20px;
     }
 
     .crq-pop a {
-        margin: 0 0 -140px 0;
-        font-size: 26px;
+        font-size: 18px;
     }
 
     .imagens{
        display: grid;
-       grid: repeat(2, 400px) / auto-flow 200px;
+       grid: repeat(2, 320px) / auto-flow 160px;
     }
 
     .imagens img{
-        max-width: 100%;
-        height: auto;
         position: relative;
-        top: -70px;
+        left: -10px;
     }
 
     #garota, #copos{
         position: relative;
-        top: 20px; left: 30px;
+        top: 20px; left: 10px;
     }
 
     #usina{
@@ -697,9 +681,9 @@ body{
     #bolinhas{
         max-width: 100%;
         height: auto;
-        width: 300px;
+        width: 190px;
         position: relative;
-        top: 60px; left: -350px;
+        top: 110px; left: -200px;
         transform: rotate(-90deg);
         z-index: 1;
     }
@@ -707,99 +691,71 @@ body{
     /* Section de 30 anos */
 
     .anos{
-        padding: 4.5em;
+        padding: 2.5em;
     }
 
     .anos h2{
-        font-size: 35px;
-        color: var(--fundo-azul);
+        font-size: 25px;
     }
 
     #circulo{
-        filter: brightness(30%);
-        position: relative;
-        z-index: 1;
-        transform: rotate(270deg);
-        opacity: 20%;
-        top: 80px; left: -150px;
-        max-width: 100%;
-        height: auto;
-        width: 250px;
-    }
-
-    .grupo{
-        display: flex;
-        align-items: center;
-        gap: 4em;
-        justify-content: center;
-        position: relative;       
-        top: -40px;
-    }
-
-    .grupo img{
-        max-width: 100%;
-        height: auto;
-        width: 800px;
-        z-index: 2;
+        top: 80px; left: -100px;
+        width: 200px;
     }
 
     .grupo p{
-        font-size: 30px;
+        font-size: 20px;
     }
 
-    .pop-{
-        color: var(--fundo-pop);
+    .grupo{
+        margin: 1em 0 0 0;
+        flex-direction: row;
+        align-items: center;
+        gap: 1em;
     }
+
+    .grupo img{
+        width: 350px;
+        z-index: 2;
+    }
+
 
     /* Section de Explicacao POP*/
 
     .plus-crq{
-        background-color: var(--fundo-cinza);
-        padding: 4em;
+        padding: 2em;
     }
 
     .plus-crq h2{
         text-align: start;
-        color: var(--branco);
-        font-size: 30px;
-        margin: 0 0 2em 0;
+        font-size: 25px;
     }
 
     .plus img{
-        max-width: 100%;
-        height: auto;
-        width: 180px;
-        margin: 0 0 1em 0;
+        width: 120px;
     }
 
     .plus span{
-        font-size: 70px;
-        color: var(--fundo-pop);
+        font-size: 50px;
     }
 
     .plus{
-        display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 1.5em;
-    }
-
-    .caracteres{
-        font-weight: 800;
+        gap: 1em;
     }
 
     /* Section pequena */
 
     #fogo{
-        max-width: 100%;
-        height: auto;
-        width: 200px;
-        margin: 0 0 0 -20px;
+        width: 150px;
+        margin: 0 0 0 -70px;
     }
 
     .conheca h2{
         margin: .5em 0 0 -1.7em;
-        font-size: 25px;
+        font-size: 22px;
     }
 
 
@@ -819,66 +775,37 @@ body{
         transform: rotate(180deg);
         opacity: 30%;
         position: relative;
-        top: 5px; left: 300px;
+        top: 5px; left: 120px;
     }
 
     /* Section Sobre Palestra */
 
     .palestra{
-        background-color: var(--azul-escuro);
-        padding: 4em;
-    }
-
-    .palestra img, .titulo img{
-        max-width: 100%;
-        height: auto;
-    }
-
-    .pop-palestra p{
-        color: var(--branco);
+        padding: 2em;
     }
 
     .titulo img{
-        width: 80px;
+        width: 60px;
     }
 
     .titulo{
-        display: flex;
-        align-items: center;
-        gap: 1em;
-        font-size: 30px;
-        font-weight: 700;
-        text-align: start;
-        color: var(--branco);
-        padding: 1em;
+      font-size: 22px;
+      font-weight: 700;
     }
 
     #palestrante{
-        width: 250px;
-    }
-
-    .pop-palestra{
-        display: flex;
-        align-items: center;
-        padding: 1em;
+        width: 200px;
     }
 
     .pop-palestra p{
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .caixa-branca{
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        color: black;
-        background-color: var(--branco);
-        border: 1px solid var(--branco);
-        border-radius: 12px;
         width: 50%;
         padding: 15px 20px;
         margin: 0 0 0 1em;
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .caixas{
@@ -888,20 +815,11 @@ body{
     /* Section sobre os numeros do POP */
 
     .kids{
-        max-width: 100%;
-        height: auto;
-        width: 500px;
+        width: 700px;
     }
 
     .numeros{
-        padding: 4em;
-    }
-
-    .numeros-{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1em;
+        padding: 2em;
     }
 
     .botao__numero{
@@ -913,77 +831,56 @@ body{
     }
 
     .numeros-listas p{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .numeros-listas h2{
         font-weight: 700;
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .clique{
         color: var(--fundo-azul);
         text-align: center;
         position: relative;
-        top: -10px; left: -15px;
-        margin: 0 0 1em 1em;
-        font-size: 20px;
+        top: -20px; left: -3px;
+        font-size: 18px;
     }
 
     /* Section sobre os descontos */
 
     .desconto{
-        background-color: var(--azul-escuro);
-        padding: 4em;
+        padding: 2em;
     }
 
     .titulo-desconto img{
-        max-width: 100%;
-        height: auto;
-        width: 80px;
-    }
-
-    .titulo-desconto{
-        display: flex;
-        padding: 1em;
-        align-items: center;
-        justify-content: start;
-        gap: 2em;
+        width: 60px;
     }
 
     .titulo-desconto h2{
-        color: var(--branco);
-        font-size: 28px;
+        font-size: 22px;
         font-weight: 700;
     }
 
     .desconto p{
         text-align: start;
         margin: 0 0 0 2em;
-        font-size: 20px;
-        color: var(--branco);
+        font-size: 18px;
     }
 
     .card{
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1em;
         padding: 1em 0;
     }
 
     .card img{
-        max-width: 100%;
-        height: auto;
-        width: 300px;
+        width: 170px;
     }
 
     .clique2{
-        color: var(--branco);
-        text-align: center;
-        position: relative;
-        top: 15px; left: 12px;
-        margin: 0 0 0 1em;
+        top: 5px; left: 15px;
         font-size: 16px;
     }
 
@@ -991,129 +888,90 @@ body{
     /* Section sobre a Colação */
 
     .colacao{
-        padding: 4em;
+        padding: 2em;
     }
 
     .colacao h2{
-        padding: 1em;
-        color: var(--fundo-azul);
         text-align: start;
         font-weight: 700;
-        font-size: 26px;
+        font-size: 22px;
     }
 
     .quimica img{
-        max-width: 100%;
-        height: auto;
-        width: 800px;
+        width: 700px;
     }
 
     .quimica p{
         text-align: start;
-        padding: 1em;
-        font-size: 20px;
-        color: var(--fundo-azul);
+        font-size: 18px;
     }
 
     .quimica{       
-        display: flex;
-        align-items: center;
+       flex-direction: row;
     }
 
     /* Section sobre ações */
 
     .acoes{
-        background-color: var(--azul-escuro);
-        padding: 4em;
-        height: 200px;
+        padding: 2em;
     }
 
     .acoes p{
-        color: var(--branco);
         text-align: start;
-        font-size: 22px;
-        padding: 1em;
+        font-size: 18px;
     }
 
     .acoes3 img{
-        max-width: 100%;
-        height: auto;
-        width: 80px;
+        width: 60px;
     }
 
     .acoes3 h2{
-        color: var(--branco);
-        font-size: 28px;
+        font-size: 22px;
         font-weight: 700;
     }
-
-    .acoes3{
-        display: flex;
-        align-items: center;
-        padding: 1em;
-        gap: 1em;
-    }
-
-    #circulo-acoes{
-        position: relative;
-        top:-180px; left: 830px;
-        max-width: 100%;
-        height: auto;
-        width: 300px;
-        transform: rotate(90deg);
-        opacity: 20%;
-    }
-    
 
     /* Section sobre o Premio Lavoisier */
 
     .lavo{
-        background-color: var(--fundo-cinza);
-        display: flex;
-        padding: 4em;
+        padding: 2em;
     }
 
     .medalha img{
-        max-width: 100%;
-        height: auto;
-        width: 400px;
-        margin-top: -75px;
+        width: 500px;
+        margin-top: -41px;
     }
 
     .texto-lavo{
-        color: var(--branco);
         text-align: start;
     }
 
     .texto-lavo h2{
         padding: 0 1em;
-        font-size: 35px;
+        font-size: 25px;
         font-weight: 700;
     }
 
     .texto-lavo p, .texto-lavo ul{
         padding: 1em 1.3em;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .texto-lavo a{
-        color: var(--branco);
-        font-size: 22px;
+        font-size: 20px;
     }
 
     /* Section sobre o premio crq-sp */
 
     .crq-sp{
         text-align: start;
-        padding: 4em;
-        color: var(--fundo-azul);
+        padding: 2em;
     }
 
     .lista-premio{
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 4em;
+        gap: 1em;
     }
 
     .profissionais-lista{
@@ -1124,131 +982,93 @@ body{
     }
     
     .premio-li{
-        font-size: 22px;
+        font-size: 18px;
     }
 
     #titulo{
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .crq-sp img{
         max-width: 100%;
         height: auto;
-        width: 250px;
+        width: 200px;
         align-items: center;
         margin: 1em 0 1em 5em;
     }
 
     .crq-sp h2{
-        font-size: 28px;
+        font-size: 26px;
         font-weight: 700;
         padding: .5em;
     }
 
     .crq-sp p{
         padding: 1em;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .crq-sp a{
-        color: var(--fundo-azul);
-        font-size: 20px;
+        font-size: 18px;
         padding: 1em;
     }
 
     /* Section sobre os Cursos */
 
     .cursos{
-        background-color: var(--azul-escuro);
-        padding: 4em;
-        height: 170px;
+        padding: 2em;
     }
 
     .four img{
-        max-width: 100%;
-        height: auto;
-        width: 80px;
-    }
-
-    .four{
-        display: flex;
-        align-items: center;
-        gap: 1em;
+        width: 60px;
     }
 
     .four h2{
         font-weight: 700;
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .cursos p{
         text-align: start;
-        font-size: 22px;
+        font-size: 18px;
         padding: 1.5em 1em;
-    }
-
-    .cursos p, .four h2{
-        color: var(--branco);
     }
 
     /* Section sobre contato */
 
     .contato{
         text-align: start;
-        padding: 4em;
-        color: var(--fundo-azul);
-        font-size: 28px;
+        padding: 2.5em;
+        font-size: 22px;
     }
 
 
     /* Rodape */
 
     .rodape{
-        background-color: var(--fundo-azul);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 4em;
-        color: var(--branco);
+        padding: 2em;
     }
 
     #logo-branco{
-        max-width: 100%;
-        height: auto;
-        width: 300px;
+        width: 250px;
         margin: .5em 0 1em 0;
     }
 
-    .texto-rodape{
-        display: flex;
-        gap: 1em;
-        text-align: center;
-        align-items: center;
-    }
-
     .texto-rodape h2{
-        color: var(--fundo-pop);
-        font-size: 70px;
+        font-size: 50px;
     }
 
     .texto-rodape h3{
-        font-size: 30px;
-    }
-
-    .final{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1em;
+        font-size: 25px;
     }
 
     .final p{
-        font-size: 26px;
+        font-size: 20px;
     }
 
 }
+
+/* Resposivo Computador */
 
 @media (min-width: 1330px){
 
@@ -1517,3 +1337,5 @@ body{
     /* Rodape */
 
 }
+
+
