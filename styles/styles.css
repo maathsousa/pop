@@ -1070,29 +1070,30 @@ body{
 
 /* Resposivo Computador */
 
-@media (min-width: 1330px){
+@media (min-width: 1200px){
 
     /* Banner Inicio */
 
     .tudo{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1.5em 12em;
+        padding: 1.5em 15em;
     }
 
     .texto{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: relative;
         gap: 2em;
-        top: -110px;
+        top: -40px;
     }
 
+    .circulo{
+        width: 300px;
+        left: -115px;
+    }
+
+    .inicio span img{
+        width: 300px;
+    }
+
+
     .crq-pop p{
-        text-align: center;
         border: 3px solid var(--branco);
         padding: 15px 15px;
         border-radius: 18px;
@@ -1102,12 +1103,10 @@ body{
 
     .crq-pop h1{
         font-size: 90px;
-        color: var(--fundo-pop);
     }   
 
     .crq-pop h2{
         font-size: 50px;
-        text-align: center;
     }
 
     .crq-pop a {
@@ -1117,54 +1116,59 @@ body{
 
     .imagens{
        display: grid;
-       grid: repeat(2, 420px) / auto-flow 210px;
+       grid: repeat(2, 450px) / auto-flow 200px;
+    }
+
+    .imagens img{
+        width: 300px;
     }
 
 
     #bolinhas{
-        max-width: 100%;
-        height: auto;
         width: 350px;
-        position: relative;
-        top: -30px; left: -640px;
-        transform: rotate(-90deg);
-        z-index: 1;
+        top: -30px; left: -680px;
+
     }
 
     /* Section de 30 anos */
 
     .anos{
-        padding: 4em 12em;
+        padding: 4em 15em;
     }
 
 
     #circulo{
-        filter: brightness(30%);
-        position: relative;
-        z-index: 1;
-        transform: rotate(270deg);
-        opacity: 20%;
-        top: 80px; left: -320px;
-        max-width: 100%;
-        height: auto;
+        top: 150px; left: -360px;
         width: 350px;
+    }
+
+    .anos h2{
+        font-size: 26px;
+        text-align: start;
+    }
+
+    .grupo p{
+        font-size: 24px;
+        margin-left: 4em;
+    }
+
+    .grupo img{
+        width: 550px;
     }
 
     /* Section de Explicacao POP*/
 
     .plus-crq{
-        padding: 3em 12em;
+        padding: 3em 15em;
     }
 
     .plus img{
-        max-width: 100%;
-        height: auto;
         width: 200px;
         margin: 0 0 1em 0;
     }
 
     .plus span{
-        font-size: 100px;
+        font-size: 90px;
     }
 
     /* Section pequena */
@@ -1180,38 +1184,36 @@ body{
         font-size: 28px;
     }
 
-
     .conheca{
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        padding: .5em 12em;
+        padding: 0 15em;
     }
 
     #circulo-pequeno{
-        display: block;
-        filter: brightness(30%);
-        max-width: 100%;
-        height: auto;
-        width: 300px;
-        transform: rotate(180deg);
+        width: 260px;
         opacity: 10%;
-        position: relative;
-        top: 5px; left: 500px;
+        top: 5px; left: 460px;
     }
 
     /* Section Sobre Palestra */
 
     .palestra{
-        padding: 2em 12em;
+        padding: 2em 15em;
+    }
+
+    .titulo img{
+        width: 80px;
+    }
+
+    .titulo h2{
+        font-size: 28px;
     }
 
     #palestrante{
-        width: 350px;
+        width: 300px;
     }
 
     .pop-palestra p, .caixa-branca{
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .caixa-branca br{
@@ -1225,35 +1227,47 @@ body{
     /* Section sobre os numeros do POP */
 
     .numeros{
-        padding: 2em 12em;
+        padding: 2em 15em;
     }
 
     /* Section sobre os descontos */
 
     .desconto{
-        padding: 2em 12em;
+        padding: 2em 15em;
+    }
+
+    .titulo-desconto img{
+        width: 80px;
+    }
+
+    .titulo-desconto h2{
+        font-size: 28px;
+    }
+
+    .titulo-desconto{
+        justify-content: start;
     }
 
     .desconto p{
         margin: 0 0 0 1em;
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .card img{
         max-width: 100%;
         height: auto;
-        width: 400px;
+        width: 350px;
     }
 
     .clique2{
-        font-size: 25px;
+        font-size: 22px;
     }
 
 
     /* Section sobre a Colação */
 
     .colacao{
-        padding: 2em 12em;
+        padding: 2em 15em;
     }
 
     .colacao h2{
@@ -1261,76 +1275,100 @@ body{
     }
 
     .quimica img{
-        max-width: 100%;
-        height: auto;
-        width: 940px;
+        width: 900px;
     }
 
     .quimica p{
-        text-align: start;
-        font-size: 25px;
-        color: var(--fundo-azul);
+        font-size: 23px;
     }
 
     /* Section sobre ações */
 
     .acoes{
-        padding: 2em 12em;
-        height: 230px;
+        padding: 2em 15em;
+    }
+
+    .acoes img{
+        width: 80px;
+    }
+
+    .acoes h2{
+        font-size: 28px;
     }
 
     .acoes p{
         font-size: 24px;
-    }
-
-    #circulo-acoes{
-        top:-180px; left: 1316px;
-    }
-    
+    }    
 
     /* Section sobre o Premio Lavoisier */
 
     .lavo{
-        padding: 2em 12em;
+        padding: 2em 15em;
     }
 
     .medalha img{
-        max-width: 100%;
-        height: auto;
-        width: 300px;
+        width: 250px;
         margin-top: -40px;
+    }
+
+    .texto-lavo{
+        text-align: start;
+    }
+
+    .texto-lavo h2{
+        font-size: 28px;
+    }
+
+    .texto-lavo p, .texto-lavo ul{    
+        font-size: 22px;
+    }
+
+    .texto-lavo a{
+        font-size: 22px;
     }
 
     /* Section sobre o premio crq-sp */
 
     .crq-sp{
-        padding: 2em 12em;
+        padding: 2em 15em;
     }
 
     .premio-li, #titulo, .crq-sp p, .crq-sp a{
-        font-size: 26px;
+        font-size: 22px;
     }
     
     .crq-sp h2{
         font-size: 28px;
     }
 
+    .crq-sp img{
+        width: 250px;
+    }
+
 
     /* Section sobre os Cursos */
 
     .cursos{
-        padding: 2em 12em;
-        height: 170px;
+        padding: 2em 15em;
     }
 
     .cursos p{
-        font-size: 26px;
+        font-size: 22px;
+    }
+
+    .cursos h2{
+        font-size: 28px;
+    }
+
+    .cursos img{
+        width: 80px;
     }
 
     /* Section sobre contato */
 
     .contato{
-        padding: 2em 8em;
+        padding: 2em 13em;
+        font-size: 23px;
     }
 
 
