@@ -13,54 +13,59 @@
 
 
 
-// Função para verificar se o elemento está visível na tela
-
-
-function isElementInViewport(el) {
+   // Função para verificar se o elemento está visível na tela (parcialmente ou totalmente)
+   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+    // Verificar se alguma parte do elemento está visível
+    const verticalVisible = rect.top < windowHeight && rect.bottom > 0;
+    const horizontalVisible = rect.left < windowWidth && rect.right > 0;
+
+    return verticalVisible && horizontalVisible;
   }
 
-  
   // Função para adicionar a classe 'show' quando o elemento estiver visível
-
-  
   function handleScrollAnimation() {
     const animatedItems = document.querySelectorAll('.animate-up');
-  
+
     animatedItems.forEach((item) => {
       if (isElementInViewport(item)) {
         item.classList.add('show');
       }
     });
   }
-  
-  // Dispara a função quando houver scroll
-  window.addEventListener('scroll', handleScrollAnimation);
-  
-  // Executa a função uma vez no início para verificar a posição inicial dos elementos
-  handleScrollAnimation();
 
+  // Espera o DOM estar completamente carregado para executar a função
+  document.addEventListener('DOMContentLoaded', () => {
+    // Executa a função uma vez no início para verificar a posição inicial dos elementos
+    handleScrollAnimation();
 
-    // Configuração do Intersection Observer
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Inicia ambas as animações simultaneamente
-          typewriterAnimation(text1, typewriterText1);
-          typewriterAnimation(text2, typewriterText2);
-          observer.disconnect(); // Impede a animação de ocorrer mais de uma vez
-        }
-      });
+    // Adiciona eventos de scroll e resize
+    window.addEventListener('scroll', handleScrollAnimation);
+    window.addEventListener('resize', handleScrollAnimation);
+  });
+
+  // Configuração do Intersection Observer para seções específicas
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Inicia ambas as animações simultaneamente (substituir pelas suas funções reais)
+        typewriterAnimation(text1, typewriterText1);
+        typewriterAnimation(text2, typewriterText2);
+
+        // Impede que a animação ocorra mais de uma vez
+        observer.unobserve(entry.target);
+      }
     });
+  }, {
+    threshold: 0.1,  // Apenas 10% do elemento precisa estar visível para disparar
+    rootMargin: '0px 0px -100px 0px' // Expande a área de detecção
+  });
 
     // Observa a section "curso"
-    observer.observe(document.querySelector('.cursos, .crq-sp'));
+    observer.observe(document.querySelector('.cursos'));
 
 
 
