@@ -1320,6 +1320,14 @@ body{
         padding: 1em 5em;
     }
 
+    
+    /* Animação */
+
+    .cards:hover{
+        transform: scale(1.1);
+        transition: .6s;
+      }
+
 }
 
 /* Resposivo Computador */
@@ -1628,6 +1636,8 @@ body{
 
 
     /* Rodape */
+
+
 
 }
 
