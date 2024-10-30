@@ -270,8 +270,12 @@ body{
         margin: 0 1em 0 -2em;
     }
 
-
     .conheca{
+        padding: 0 1em;
+    }
+
+
+    .foguinho{
         display: flex;
         justify-content: center;
         align-items: center;
