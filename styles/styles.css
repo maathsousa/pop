@@ -7,6 +7,11 @@
     --fonte-p: "League Spartan";
 }
 
+.section{
+    position: relative;
+    overflow: hidden;
+}
+
 
 /* Animação inicial - Oculta o elemento e o move para baixo */
 .animate-up {
