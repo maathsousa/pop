@@ -12,6 +12,30 @@
     overflow: hidden;
 }
 
+/* Definindo a animação swing */
+@keyframes swing {
+    20% { transform: rotate(15deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(5deg); }
+    80% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  /* Estilo inicial para a imagem */
+  .animate img {
+    opacity: 0;
+    transform: translateY(10px); /* Um leve deslocamento inicial */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Classe 'show' para iniciar a animação e tornar o elemento visível */
+  .animate.show img {
+    opacity: 1;
+    transform: translateY(0); /* Reseta o deslocamento */
+    animation: swing 1s ease; /* Inicia a animação swing */
+  }
+  
+
 
 /* Animação inicial - Oculta o elemento e o move para baixo */
 .animate-up {

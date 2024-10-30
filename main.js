@@ -28,7 +28,7 @@
 
   // Função para adicionar a classe 'show' quando o elemento estiver visível
   function handleScrollAnimation() {
-    const animatedItems = document.querySelectorAll('.animate-up');
+    const animatedItems = document.querySelectorAll('.animate-up, .animate');
 
     animatedItems.forEach((item) => {
       if (isElementInViewport(item)) {
@@ -63,9 +63,6 @@
     threshold: 0.1,  // Apenas 10% do elemento precisa estar visível para disparar
     rootMargin: '0px 0px -100px 0px' // Expande a área de detecção
   });
-
-    // Observa a section "curso"
-    observer.observe(document.querySelector('.cursos'));
 
 
 
