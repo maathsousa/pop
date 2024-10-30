@@ -8,6 +8,27 @@
 }
 
 
+/* Animação inicial - Oculta o elemento e o move para baixo */
+.animate-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  
+  /* Quando o elemento está visível, aplica a animação */
+  .animate-up.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 body{
     font-size: 18px;
     font-weight: 400;
@@ -759,11 +780,10 @@ body{
     }
 
 
-    .conheca{
+    .foguinho{
         display: flex;
         justify-content: start;
         align-items: center;
-        padding: 0 4em;
     }
 
     #circulo-pequeno{
@@ -775,7 +795,7 @@ body{
         transform: rotate(180deg);
         opacity: 30%;
         position: relative;
-        top: 5px; left: 120px;
+        top: 23px; left: 100px;
     }
 
     /* Section Sobre Palestra */
@@ -1068,24 +1088,209 @@ body{
 
 }
 
+@media (min-width: 992px){
+      /* Banner Inicio */
+
+      .inicio{
+        padding: 1em 6em;
+    }
+
+    .circulo{        
+        max-width: 100%;
+        height: auto;
+        width: 300px;
+        top: -30px; left: -200px;
+    }
+    
+    .inicio span img{
+        width: 250px;
+        top: -150px;
+        margin: 0 10px 0 0;
+    }
+
+    .texto{
+        margin: 0 0 .3em 4em;
+        top: -140px; left: -30px;
+    }
+
+    .crq-pop p, .crq-pop a{
+        top: -150px;
+    }
+
+    .crq-pop p{
+        font-size: 18px;
+    }
+
+    .crq-pop h1{
+        font-size: 70px;
+    }   
+
+    .crq-pop h2{
+        font-size: 30px;
+    }
+
+    .crq-pop a {
+        font-size: 18px;
+    }
+
+    .imagens img{
+        position: relative;
+        width: 170px;
+        left: -50px;
+    }
+
+    #garota, #copos{
+        position: relative;
+        top: 40px; left: 10px;
+    }
+
+    #usina{
+        top: 5px
+    }
+
+    #bolinhas{
+        width: 250px;
+        top: 40px; left: -320px;
+    }
+
+    /* Section de 30 anos */
+
+    .anos{
+        padding: 1em 5em;
+    }
+
+
+    #circulo{
+        top: 80px; left: -150px;
+        width: 200px;
+    }
+
+
+
+    /* Section de Explicacao POP*/
+
+    .plus-crq{
+        padding: 1em 5em;
+    }
+
+    .plus-crq h2{
+        text-align: start;
+        font-size: 25px;
+    }
+
+    .plus img{
+        width: 120px;
+    }
+
+    .plus span{
+        font-size: 50px;
+    }
+
+    .plus{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    /* Section pequena */
+
+    
+    /* Section Sobre Palestra */
+
+    .palestra{
+        padding: 1.5em 5em;
+    }
+
+    /* Section sobre os numeros do POP */
+
+    .numeros{
+        padding: 1em 5em;
+    }
+
+
+    /* Section sobre os descontos */
+
+    .desconto{
+        padding: 1em 5em;
+    }
+
+    .titulo-desconto{
+        justify-content: start;
+    }
+
+    .card img{
+        width: 220px;
+    }
+
+    /* Section sobre a Colação */
+
+    .colacao{
+        padding: 1em 5em;
+    }
+
+    /* Section sobre ações */
+
+    .acoes{
+        padding: 1em 5em;
+    }
+
+    /* Section sobre o Premio Lavoisier */
+
+    .lavo{
+        padding: 1em 5em;
+    }
+
+    .medalha img{
+        width: 500px;
+        margin-top: -21px;
+    }
+
+    /* Section sobre o premio crq-sp */
+
+    .crq-sp{
+        padding: 1em 5em;
+    }
+
+    /* Section sobre os Cursos */
+
+    .cursos{
+        padding: 1em 5em;
+    }
+
+    /* Section sobre contato */
+
+    .contato{
+        padding: 1em 5em;
+    }
+
+
+    /* Rodape */
+
+    .rodape{
+        padding: 1em 5em;
+    }
+
+}
+
 /* Resposivo Computador */
 
-@media (min-width: 1200px){
+@media (min-width: 1400px){
 
     /* Banner Inicio */
 
     .tudo{
-        padding: 1.5em 15em;
+        padding: 1.5em 6em;
     }
 
     .texto{
         gap: 2em;
-        top: -40px;
+        top: -130px;
     }
 
     .circulo{
         width: 300px;
-        left: -115px;
+        left: -200px;
     }
 
     .inicio span img{
@@ -1095,7 +1300,7 @@ body{
 
     .crq-pop p{
         border: 3px solid var(--branco);
-        padding: 15px 15px;
+        padding: 18px 18px;
         border-radius: 18px;
         margin: 1em 0 1em 0;
         font-size: 28px;
@@ -1186,12 +1391,13 @@ body{
 
     .conheca{
         padding: 0 15em;
+        justify-content: start;
     }
 
     #circulo-pequeno{
         width: 260px;
         opacity: 10%;
-        top: 5px; left: 460px;
+        top: 5px; left: 250px;
     }
 
     /* Section Sobre Palestra */
