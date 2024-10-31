@@ -375,32 +375,27 @@ body{
     .kids{
         max-width: 100%;
         height: auto;
-        width: 200px;
+        width: 300px;
     }
 
     .numeros-{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
         padding: 1em;
         gap: 1em;
     }
 
-    .botao__numero{
-        margin: 3em 0 0 0;
-        background-color: var(--azul-escuro);
-        border: 0px;
-        border-radius: 12px;
-        color: var(--branco);
-        padding: 10px 10px;
-        text-align: center;
-        text-decoration: none;
-        margin: 0;
+    
+    .numeros-listas h2{
+        font-weight: 600;
+        font-size: 20px;
     }
 
-    .numeros-reais{
-        display: none;
+    .numeros-listas p{
+        font-size: 18px;
     }
+    
 
     .clique{
         color: var(--fundo-azul);
@@ -887,10 +882,10 @@ body{
         padding: 2em;
     }
 
-    .botao__numero{
-        display: none;
+    .numeros-{
+        flex-direction: row;
     }
-
+    
     .numeros-reais{
         display: block;
     }
